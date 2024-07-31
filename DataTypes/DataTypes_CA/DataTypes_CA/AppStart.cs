@@ -4,6 +4,8 @@
 // ||                                                    || \\
 // ||~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|| \\
 
+using DataTypes_CA.DataTypes;
+
 namespace DataTypes_CA
 {
     /// <summary>
@@ -17,7 +19,17 @@ namespace DataTypes_CA
         /// <param name="args">Arguments.</param>
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello App!");
+            // -----------------------------------------------
+            //                     BOOL
+            // -----------------------------------------------
+            Bool_Examples.RunExample();
+            //Bool_Examples.RunAdvancedExample();
+
+            // -----------------------------------------------
+            //                     CHAR
+            // -----------------------------------------------
+            //Char_Examples.RunExample();
+            //Char_Examples.RunMathematicalOperationsExample();
         }
     }
 }
