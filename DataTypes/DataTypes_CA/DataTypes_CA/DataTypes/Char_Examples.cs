@@ -7,7 +7,7 @@
 namespace DataTypes_CA.DataTypes
 {
     /// <summary>
-    /// Examples related to the Char examples.
+    /// Examples related to the Char data type.
     /// </summary>
     internal class Char_Examples
     {

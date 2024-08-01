@@ -17,8 +17,11 @@ Divided into 3 categories:
 
 - [Bool](#bool)
 - [Char](#char)
+- [Short](#short)
 - [Integer](#integer)
-- [Floag](#float)
+- [Long](#long)
+- [Float](#float)
+- [Double](#double)
 
 # Bool
 
@@ -54,7 +57,7 @@ Another fundamental (primitive) data type, typically used to represent a single 
 
 ### 1-Byte x 2-Byte
 With 1 byte allocation, we can store 256 values, ranging from -127 to 128. If we were using **unsigned char**, then the range would be from 0 to 255.
-2 bytes allocation is used to be able to store in a char other characters than characters from Extended ASCII table. Using the 2 bytes memory allocation, we are able to store Unicode character (limited to Basic Multilingual Plane) into the variable and we can save up to 65 536 values depending whether the **char** is unsigned (range: 0 up to 65 536) or signed (-32 767 up to 32 768).
+2 bytes allocation is used to be able to store in a char other characters than characters from Extended ASCII table. Using the 2 bytes memory allocation, we are able to store Unicode character (limited to Basic Multilingual Plane) into the variable and we can save up to 65,536 values depending whether the **char** is unsigned (range: 0 up to 65,536) or signed (-32,767 up to 32,768).
 
 ### Operations
 
@@ -64,6 +67,34 @@ We can perform various operations on **char** data types, such as comparison, ar
 
 
 
-# Integer
+# Short
+Next fundamental (primitive) data type used to represent small integer values. The **short** data type is typically smaller than the **int** data type.
+It is guaranteed to be at least 2 Bytes (16-bits) in size, but the exact size can vary depending on the platform and compiler.
 
+### Representation
+The **short** data type can be either signed or unsiged, as some other data types. Range of a signed **short** is from -32,768 up to 32,767 (the range is due to its 16-bit size, where 1 bit is used for the sign) and range of an unsigned **short** is from 0 to 65,535.
+
+### Operations
+We can perform various operations on **short** data types, such as arithmetic, bitwise, comparison operations. We can cast it to another data type as well either implicitly or explicitly. Implicit casting means that we are casting the data type to a data type which is bigger in size, e.g. short (16-bit) -> int (32-bit), char (8-bit) -> short (16-bit). Explicit casting means the opposite, casting from bigger to smaller one. Overflow may occur, so be careful, e.g. int (32-bit) -> short (16-bit), short (16-bit) -> char (8-bit).
+
+
+
+
+
+# Integer
+One of the most commonly used data type for numerical operations. The data type can precisely represent any whole number within its range depending on the type of an **int** data type. 
+
+### Representation
+By default, the **int** has 4 Bytes (32-bits), where the most significant bit represents the sign (0 for positive number, 1 for negative number). **Int** can have different representations, for example **Int64** has 8 Bytes (64-bits) or we can have smaller ones **Int16**, which has 2 Bytes (16-bits).
+The default **Int**, the one with 4 Bytes, has range going from -2,147,483,648 to 2,147,483,647 for signed **Int** and range from 0 to 4,294,967,295 in case of unsigned **Int**.
+
+### Operations
+We can perform the same operations as on data type **short** (arithmetic, bitwise, comparison and casting to another data types). Integer arithmetic is typically faster than floating-point arithmetic on most processors, making **Int** a good choise for performace-critical code.
+
+
+
+
+
+# Long
 # Float
+# Double

@@ -22,7 +22,7 @@ namespace DataTypes_CA
             // -----------------------------------------------
             //                     BOOL
             // -----------------------------------------------
-            Bool_Examples.RunExample();
+            //Bool_Examples.RunExample();
             //Bool_Examples.RunAdvancedExample();
 
             // -----------------------------------------------
@@ -30,6 +30,18 @@ namespace DataTypes_CA
             // -----------------------------------------------
             //Char_Examples.RunExample();
             //Char_Examples.RunMathematicalOperationsExample();
+
+            // -----------------------------------------------
+            //                     SHORT
+            // -----------------------------------------------
+            //Short_Example.RunExample();
+            //Short_Example.RunAdvancedExample();
+
+            // -----------------------------------------------
+            //                     INT
+            // -----------------------------------------------
+            Int_Example.RunExample();
+            //Int_Example.RunAdvancedExample();
         }
     }
 }
