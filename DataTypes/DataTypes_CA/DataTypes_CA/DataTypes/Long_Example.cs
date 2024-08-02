@@ -7,38 +7,38 @@
 namespace DataTypes_CA.DataTypes
 {
     /// <summary>
-    /// Examples related to the Int data type.
+    /// Examples related to the long data type.
     /// </summary>
-    internal class Int_Example
+    internal class Long_Example
     {
         #region Simple examples
 
         /// <summary>
-        /// Displays simple integer examples in the console.
+        /// Displays simple long examples in the console.
         /// </summary>
         internal static void RunExample()
         {
 
-            // Signed integer
-            int minValue = int.MinValue;
-            int maxValue = int.MaxValue;
+            // Signed long
+            long minValue = long.MinValue;
+            long maxValue = long.MaxValue;
 
-            int testValue = 100;
-            long longValue = testValue; // Implicit cast
+            long testValue = 100;
+            Int128 int128Value = testValue; // Implicit cast
             short shortValue = (short)testValue; // Explicit cast
 
-            // Size of integer is 4 Bytes = 32 bits
-            int sizeOfInt = sizeof(int);
+            // Size of long is 8 Bytes = 64 bits
+            int sizeOfLong = sizeof(long);
 
             Console.WriteLine(Helpers.GetConsoleOutputHeader());
 
             Console.WriteLine($"{nameof(minValue)} = '{minValue}'");
             Console.WriteLine($"{nameof(maxValue)} = '{maxValue}'");
             Console.WriteLine($"{nameof(testValue)} as int: '{testValue}'");
-            Console.WriteLine($"After implicit cast as long (64-bit value): '{longValue}'");
+            Console.WriteLine($"After implicit cast as long (64-bit value): '{int128Value}'");
             Console.WriteLine($"After explicit cast as short: '{shortValue}'");
 
-            Console.WriteLine($"Size of an int: {sizeOfInt}");
+            Console.WriteLine($"Size of a long: {sizeOfLong}");
         }
 
         #endregion Simple examples
@@ -46,7 +46,7 @@ namespace DataTypes_CA.DataTypes
         #region Advanced examples
 
         /// <summary>
-        /// Runs more advanced examples with integer data type.
+        /// Runs more advanced examples with long data type.
         /// </summary>
         internal static void RunAdvancedExample()
         {
@@ -54,4 +54,5 @@ namespace DataTypes_CA.DataTypes
 
         #endregion Advanced examples
     }
+
 }

@@ -96,5 +96,49 @@ We can perform the same operations as on data type **short** (arithmetic, bitwis
 
 
 # Long
+Another fundamental data type which is being used when **Int** data type does not provide a sufficient range. Again, the **Long** can hold only whole number within its range.
+
+### Representation
+The **Long** has 8 Bytes (64-bits), where the most significant bit represents the sign (0 for positive number, 1 for negative number). The range of a **Long** data type is from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 in case of signed **Long** or from 0 to 18,446,744,073,709,551,615 if unsigned **Long** is used.
+
+### Operations
+We can perform the same operations as on data types mentioned earlier (**short**, **Int**), meaning arithmetic, bitwise, comparison and casting operations.
+
+
+
+
+
 # Float
+**Float** data type is used to represent a single-precision floating-point numbers. It follows the IEE 754 standard for floating-point arithmetic, which defines how floating-point numbers are stored and calculated. The size of a **float** is 4 Bytes (32-bits) and has a precision of 6-9 significant decimal digits and the range is approximately from ±1.5 x $10^{-45}$ up to ±3.4 x $10^{38}$.
+
+### IEE 754 Standard
+Defines the representation and behaviour of floating-point numbers, ensuring consistency across different computing system.
+
+#### Sturecture of a **Float**
+Value = $(−1)^{sign}$ × 1.mantissa × $2^{exponent−127}$
+- Sign Bit (1 bit): Determines the sign of the number (0 is positive, 1 is negative)
+- Exponent (8 bits): Stored with a bias of 127, allowing for a range of positive and negative exponents
+- Mantissa (23 bits): Represents the significant digits of the number, with an implicit leading 1.
+
+### Special values
+1. Positive and Negative Infinity: Result form operations like division by zero.
+2. NaN (Not a Number): Represents an undefined or unrepresentable value, such as the result of 0/0.
+3. Zero: Both positive zero (+0) and negative zero (-0).
+
+Due to the limited number of bits for the mantissa, **float** numbers have limited precision. This can lead to rounding errors in calculcations, especially when dealing with very small or very large numbers. Other then that, we can use arithmetic, bitwise, comparison and casting operations. **Float** is preferred when performance is crucial and precision is less critical. Also **float**s are generally faster than the next data type called **double**.
+
+
+
+
+
 # Double
+**Double** data type is used to represent a double-precision floating-point numbers. It follows the IEE 754 standard as the **float** does.The size of a **double** is 8 Bytes (64-bits) and has a precision of approximately ±5.0 x $10^{-324}$ to ±1.7 x $10^{308}$.
+
+### Strucutre of a **Double**
+The structure is the same as for the **float** data type.
+Value = $(−1)^{sign}$ × 1.mantissa × $2^{exponent−127}$, where
+- Sign Bit (1 bit): Determines the sign of the number (0 is positive, 1 is negative)
+- Exponent (11 bits): Encoded using a biased representation
+- Mantissa (52 bits): Represents the significant digits of the number, with an implicit leading 1.
+
+Special values of a **double** are the same as for the **float**. Due to the larger number of bits for the mantissa, **double** numbers have higher precision than **float**, which reduces rounding errors in calculations, making **double** suitable for applications requiring high precision as in finances. Again, we can use all operations as mentioned for the type **float**
